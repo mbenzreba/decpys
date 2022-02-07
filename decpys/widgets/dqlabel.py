@@ -1,4 +1,4 @@
-""" Wrapper classes for widgets found in PySide6.QtWidgets.
+""" Wrapper classfor PySide6.QtWidgets.QLabel.
 """
 
 
