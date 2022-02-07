@@ -12,7 +12,9 @@ using modern declarative UI techniques completely within Python. ``decpys`` is l
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Subpackages
+
+   widgets/widgets
 
 
 
