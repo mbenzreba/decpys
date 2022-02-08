@@ -19,17 +19,26 @@ Methods
    :rtype: DQLabel
 
 
-.. py:method:: DQLabel.set_alignment(alignment)
+.. py:method:: DQLabel.alignment()
 
-    Sets this label's alignment using alignment flags from ``PySide6``.
+    Returns the alignment of this widget contained in a 2-element tuple, where the first 
+    element of the tuple is the horizontal alignment and the second is the vertical alignment.
 
-    :param alignment: Qt Alignment flags in a single integer.
-    :type alignment: int
-    :return: This DQLabel after the ``set_alignment`` mutation has been applied.
+    :return: A two-element tuple of Alignments, in the form (horizontal, vertical).
+    :rtype: Tuple[Alignment, Alignment]
+    
+
+.. py:method:: DQLabel.setAlignment(alignment)
+
+    Sets this label's alignment.
+
+    :param alignment: Alignment enumeration.
+    :type alignment: Alignment
+    :return: This DQLabel after the ``setAlignment()`` mutation has been applied.
     :rtype: DQLabel
 
 
-.. py:method:: DQLabel.set_text(text)
+.. py:method:: DQLabel.setText(text)
 
     Sets this label's text.
 
