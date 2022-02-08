@@ -13,68 +13,68 @@ from PySide6.QtCore import Qt
 
 
 
-class AlignmentFlag(Enum):
+class Alignment(Enum):
     """ Enumerates acceptable alignment values for Qt widgets and layouts.
     """
 
 
-    def from_int(value: int) -> AlignmentFlag:
-        """ Returns the `AlignmentFlag` that corresponds to `value`.
+    def from_int(value: int) -> Alignment:
+        """ Returns the `Alignment` that corresponds to `value`.
         """
         conversion_dict = {
-            0x0001  : AlignmentFlag.ALIGN_LEFT,
-            0x0002  : AlignmentFlag.ALIGN_RIGHT,
-            0x0004  : AlignmentFlag.ALIGN_HCENTER,
-            0x0008  : AlignmentFlag.ALIGN_JUSTIFY,
+            0x0001  : Alignment.ALIGN_LEFT,
+            0x0002  : Alignment.ALIGN_RIGHT,
+            0x0004  : Alignment.ALIGN_HCENTER,
+            0x0008  : Alignment.ALIGN_JUSTIFY,
 
-            0x0020  : AlignmentFlag.ALIGN_TOP,
-            0x0040  : AlignmentFlag.ALIGN_BOTTOM,
-            0x0080  : AlignmentFlag.ALIGN_VCENTER,
-            0x0100  : AlignmentFlag.ALIGN_BASELINE,
+            0x0020  : Alignment.ALIGN_TOP,
+            0x0040  : Alignment.ALIGN_BOTTOM,
+            0x0080  : Alignment.ALIGN_VCENTER,
+            0x0100  : Alignment.ALIGN_BASELINE,
 
-            0x0104  : AlignmentFlag.ALIGN_CENTER,
+            0x0104  : Alignment.ALIGN_CENTER,
 
-            0x0000  : AlignmentFlag.ALIGN_NONE
+            0x0000  : Alignment.ALIGN_NONE
         }
         return conversion_dict[int(value)]
 
 
 
-    def from_pyside(flag: Qt.AlignmentFlag) -> AlignmentFlag:
-        """ Returns the `AlignmentFlag` for `flag`.
+    def from_pyside(flag: Qt.Alignment) -> Alignment:
+        """ Returns the `Alignment` for `flag`.
         """
         conversion_dict = {
-            Qt.AlignLeft        : AlignmentFlag.ALIGN_LEFT,
-            Qt.AlignRight       : AlignmentFlag.ALIGN_RIGHT,
-            Qt.AlignHCenter     : AlignmentFlag.ALIGN_HCENTER,
-            Qt.AlignJustify     : AlignmentFlag.ALIGN_JUSTIFY,
+            Qt.AlignLeft        : Alignment.ALIGN_LEFT,
+            Qt.AlignRight       : Alignment.ALIGN_RIGHT,
+            Qt.AlignHCenter     : Alignment.ALIGN_HCENTER,
+            Qt.AlignJustify     : Alignment.ALIGN_JUSTIFY,
 
-            Qt.AlignTop         : AlignmentFlag.ALIGN_TOP,
-            Qt.AlignBottom      : AlignmentFlag.ALIGN_BOTTOM,
-            Qt.AlignVCenter     : AlignmentFlag.ALIGN_VCENTER,
-            Qt.AlignBaseline    : AlignmentFlag.ALIGN_BASELINE,
+            Qt.AlignTop         : Alignment.ALIGN_TOP,
+            Qt.AlignBottom      : Alignment.ALIGN_BOTTOM,
+            Qt.AlignVCenter     : Alignment.ALIGN_VCENTER,
+            Qt.AlignBaseline    : Alignment.ALIGN_BASELINE,
 
-            Qt.AlignCenter      : AlignmentFlag.ALIGN_CENTER
+            Qt.AlignCenter      : Alignment.ALIGN_CENTER
         }
         return conversion_dict[flag]
 
 
 
-    def to_pyside(flag: AlignmentFlag) -> Qt.AlignmentFlag:
+    def to_pyside(flag: Alignment) -> Qt.Alignment:
         """ Returns the PySide6 Qt object representation for `flag`. 
         """
         conversion_dict = {
-            AlignmentFlag.ALIGN_LEFT      : Qt.AlignLeft,
-            AlignmentFlag.ALIGN_RIGHT     : Qt.AlignRight,
-            AlignmentFlag.ALIGN_HCENTER   : Qt.AlignHCenter,
-            AlignmentFlag.ALIGN_JUSTIFY   : Qt.AlignJustify,
+            Alignment.ALIGN_LEFT      : Qt.AlignLeft,
+            Alignment.ALIGN_RIGHT     : Qt.AlignRight,
+            Alignment.ALIGN_HCENTER   : Qt.AlignHCenter,
+            Alignment.ALIGN_JUSTIFY   : Qt.AlignJustify,
 
-            AlignmentFlag.ALIGN_TOP       : Qt.AlignTop,
-            AlignmentFlag.ALIGN_BOTTOM    : Qt.AlignBottom,
-            AlignmentFlag.ALIGN_VCENTER   : Qt.AlignVCenter,
-            AlignmentFlag.ALIGN_BASELINE  : Qt.AlignBaseline,
+            Alignment.ALIGN_TOP       : Qt.AlignTop,
+            Alignment.ALIGN_BOTTOM    : Qt.AlignBottom,
+            Alignment.ALIGN_VCENTER   : Qt.AlignVCenter,
+            Alignment.ALIGN_BASELINE  : Qt.AlignBaseline,
 
-            AlignmentFlag.ALIGN_CENTER    : Qt.AlignCenter
+            Alignment.ALIGN_CENTER    : Qt.AlignCenter
         }
         return conversion_dict[flag]
 

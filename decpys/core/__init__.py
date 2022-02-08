@@ -1,4 +1,4 @@
 """ Package initialization for decpys.core.
 """
 
-from .dqt import AlignmentFlag
+from .dqt import Alignment

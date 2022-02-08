@@ -12,7 +12,7 @@ from PySide6.QtWidgets import QLabel, QWidget
 from PySide6.QtCore import Qt
 
 # decpys
-from decpys.core import AlignmentFlag
+from decpys.core import Alignment
 
 
 
@@ -29,19 +29,19 @@ class DQLabel(QLabel):
 
 
 
-    def alignment(self) -> Tuple[AlignmentFlag, AlignmentFlag]:
+    def alignment(self) -> Tuple[Alignment, Alignment]:
         """ Returns the alignment of this widget contained in a 2-element tuple, where the first 
         element of the tuple is the horizontal alignment and the second is the vertical alignment.
         """
-        return (AlignmentFlag.from_int(super().alignment() & Qt.AlignHorizontal_Mask), 
-                AlignmentFlag.from_int(super().alignment() & Qt.AlignVertical_Mask))
+        return (Alignment.from_int(super().alignment() & Qt.AlignHorizontal_Mask), 
+                Alignment.from_int(super().alignment() & Qt.AlignVertical_Mask))
 
 
 
-    def setAlignment(self, alignment: AlignmentFlag) -> DQLabel:
+    def setAlignment(self, alignment: Alignment) -> DQLabel:
         """ Sets this label's alignment using alignment flags from PySide6.
         """
-        super().setAlignment(Qt.AlignmentFlag(alignment.value))
+        super().setAlignment(Qt.Alignment(alignment.value))
         return self
 
 

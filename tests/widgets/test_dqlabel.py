@@ -13,7 +13,7 @@ from PySide6.QtWidgets import QApplication
 
 # decpys
 from decpys.widgets import DQLabel
-from decpys.core import AlignmentFlag
+from decpys.core import Alignment
 
 
 
@@ -49,7 +49,7 @@ def test_dqlabel_alignment():
     TODO: Recheck the appearance of this alignment bug in E2E testing. 
     """
     app = init_qapp
-    label = DQLabel("label1").setAlignment(AlignmentFlag.ALIGN_VCENTER)
-    assert label.alignment() == (AlignmentFlag.ALIGN_NONE, AlignmentFlag.ALIGN_VCENTER, )
-    label = label.setAlignment(AlignmentFlag.ALIGN_TOP)
-    assert label.alignment() == (AlignmentFlag.ALIGN_NONE, AlignmentFlag.ALIGN_TOP, )
+    label = DQLabel("label1").setAlignment(Alignment.ALIGN_VCENTER)
+    assert label.alignment() == (Alignment.ALIGN_NONE, Alignment.ALIGN_VCENTER, )
+    label = label.setAlignment(Alignment.ALIGN_TOP)
+    assert label.alignment() == (Alignment.ALIGN_NONE, Alignment.ALIGN_TOP, )
