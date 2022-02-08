@@ -39,7 +39,7 @@ class DQLabel(QLabel):
 
 
     def setAlignment(self, alignment: Alignment) -> DQLabel:
-        """ Sets this label's alignment using alignment flags from PySide6.
+        """ Sets this label's alignment.
         """
         super().setAlignment(Qt.Alignment(alignment.value))
         return self
