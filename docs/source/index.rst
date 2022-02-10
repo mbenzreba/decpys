@@ -15,6 +15,7 @@ using modern declarative UI techniques completely within Python. ``decpys`` is l
    :caption: Subpackages
 
    widgets/widgets
+   core/core
 
 
 
