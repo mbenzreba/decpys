@@ -18,6 +18,7 @@ class Alignment(Enum):
     """
 
 
+    @staticmethod
     def from_int(value: int) -> Alignment:
         """ Returns the `Alignment` that corresponds to `value`.
         """
@@ -40,6 +41,7 @@ class Alignment(Enum):
 
 
 
+    @staticmethod
     def from_pyside(flag: Qt.Alignment) -> Alignment:
         """ Returns the `Alignment` for `flag`.
         """
@@ -60,6 +62,7 @@ class Alignment(Enum):
 
 
 
+    @staticmethod
     def to_pyside(flag: Alignment) -> Qt.Alignment:
         """ Returns the PySide6 Qt object representation for `flag`. 
         """
