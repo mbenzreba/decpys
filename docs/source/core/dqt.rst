@@ -28,7 +28,7 @@ Alignment
     * ALIGN_CENTER
     * ALIGN_NONE
 
-.. py:method:: Alignment.from_int(value)
+.. py:method:: Alignment.fromInt(value)
     :staticmethod:
 
     Returns the ``Alignment`` that corresponds to ``value``.
@@ -39,7 +39,7 @@ Alignment
         value could not be matched, or if the value is a combination of flags.
     :rtype: Alignment
 
-.. py:method:: Alignment.from_pyside(flag)
+.. py:method:: Alignment.fromPyside(flag)
     :staticmethod:
 
     Returns the ``decpys`` implementation for a ``Qt.Alignment`` object.
@@ -49,7 +49,7 @@ Alignment
     :return: The ``Alignment`` that corresponds to ``flag``.
     :rtype: Alignment
 
-.. py:method:: Alignment.to_pyside(flag)
+.. py:method:: Alignment.toPyside(flag)
     :staticmethod:
 
     Returns the PySide6 Qt object representation for ``flag``.

@@ -19,7 +19,7 @@ class Alignment(Enum):
 
 
     @staticmethod
-    def from_int(value: int) -> Alignment:
+    def fromInt(value: int) -> Alignment:
         """ Returns the `Alignment` that corresponds to `value`.
         """
         conversion_dict = {
@@ -42,7 +42,7 @@ class Alignment(Enum):
 
 
     @staticmethod
-    def from_pyside(flag: Qt.Alignment) -> Alignment:
+    def fromPyside(flag: Qt.Alignment) -> Alignment:
         """ Returns the `Alignment` for `flag`.
         """
         conversion_dict = {
@@ -63,7 +63,7 @@ class Alignment(Enum):
 
 
     @staticmethod
-    def to_pyside(flag: Alignment) -> Qt.Alignment:
+    def toPyside(flag: Alignment) -> Qt.Alignment:
         """ Returns the PySide6 Qt object representation for `flag`. 
         """
         conversion_dict = {

@@ -33,8 +33,8 @@ class DQLabel(QLabel):
         """ Returns the alignment of this widget contained in a 2-element tuple, where the first 
         element of the tuple is the horizontal alignment and the second is the vertical alignment.
         """
-        return (Alignment.from_int(super().alignment() & Qt.AlignHorizontal_Mask), 
-                Alignment.from_int(super().alignment() & Qt.AlignVertical_Mask))
+        return (Alignment.fromInt(super().alignment() & Qt.AlignHorizontal_Mask), 
+                Alignment.fromInt(super().alignment() & Qt.AlignVertical_Mask))
 
 
 
