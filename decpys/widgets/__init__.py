@@ -2,4 +2,4 @@
 """
 
 
-from .dqlabel import DQLabel
+from .qlabel import QLabel

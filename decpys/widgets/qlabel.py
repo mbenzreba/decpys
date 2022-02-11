@@ -8,7 +8,8 @@ from __future__ import annotations
 from typing import Tuple
 
 # base
-from PySide6.QtWidgets import QLabel, QWidget
+from PySide6.QtWidgets import (QLabel as BaseQLabel, 
+                               QWidget as BaseQWidget)
 from PySide6.QtCore import Qt
 
 # decpys
@@ -16,7 +17,7 @@ from decpys.core import Alignment
 
 
 
-class DQLabel(QLabel):
+class QLabel(BaseQLabel):
     """ Used to show text, movies, pictures. etc. as a label.
     """
 
@@ -38,7 +39,7 @@ class DQLabel(QLabel):
 
 
 
-    def setAlignment(self, alignment: Alignment) -> DQLabel:
+    def setAlignment(self, alignment: Alignment) -> QLabel:
         """ Sets this label's alignment.
         """
         super().setAlignment(Qt.Alignment(alignment.value))
@@ -46,7 +47,7 @@ class DQLabel(QLabel):
 
 
 
-    def setText(self, text: str) -> DQLabel:
+    def setText(self, text: str) -> QLabel:
         """ Sets this label's text.
         """
         super().setText(text)
