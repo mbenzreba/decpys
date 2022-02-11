@@ -13,4 +13,4 @@ for an index of all widgets this package wraps.
     :maxdepth: 1
     :caption: Classes
 
-    dqlabel
+    qlabel
