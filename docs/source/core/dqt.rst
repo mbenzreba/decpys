@@ -1,4 +1,4 @@
-DQt
+Qt
 ===
 
 ``from decpys.core import *``

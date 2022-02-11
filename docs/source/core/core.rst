@@ -13,4 +13,4 @@ for an index of all functionality this package mimics.
     :maxdepth: 1
     :caption: Classes
 
-    dqt
+    qt
