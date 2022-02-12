@@ -1,0 +1,17 @@
+Classname
+=========
+
+``from decpys.package import Classname``
+
+See the `official Qt documentation <https://doc.qt.io/path/to/Qt/docs>`_
+for the functionality this class wraps.
+
+
+Methods
+-------
+
+.. py:class:: Classname(self)
+
+
+.. py:method:: Classname.methodname()
+
