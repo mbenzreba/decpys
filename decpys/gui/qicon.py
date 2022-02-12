@@ -2,11 +2,18 @@
 """
 
 
-from PySide6.QtGui import QIcon as BaseQIcon
+
+# built-in
 import os
+
+# pyside
+from PySide6.QtGui import QIcon as BaseQIcon
+
 
 
 class QIcon(BaseQIcon):
+    """ Used in conjunction with a widget to display a scalable icon.
+    """
 
 
 
