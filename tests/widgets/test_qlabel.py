@@ -20,6 +20,8 @@ from decpys.core import Alignment
 
 @pytest.fixture(scope="module")
 def init_qapp():
+    """ Initialize the Qt application so that widgets can exist.
+    """
     app = QApplication()
     yield app
 
@@ -28,14 +30,12 @@ def test_qlabel(init_qapp):
     """ Test that a QLabel can be instantiated and is type QLabel.
     """
     assert isinstance(QLabel(), QLabel)
-    
 
 
 def test_qlabel_is_qlabel(init_qapp):
     """ Test that a QLabel is an instance of QLabel.
     """
     assert isinstance(QLabel(), BaseQLabel)
-
 
 
 def test_qlabel_alignment(init_qapp):
