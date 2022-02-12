@@ -14,8 +14,10 @@ using modern declarative UI techniques completely within Python. ``decpys`` is l
    :maxdepth: 2
    :caption: Subpackages
 
-   widgets/widgets
    core/core
+   gui/gui
+   widgets/widgets
+   
 
 
 
