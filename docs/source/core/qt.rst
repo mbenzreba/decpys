@@ -34,7 +34,7 @@ Alignment
     Returns the ``Alignment`` that corresponds to ``value``.
 
     :param value: Integer value representing a single ``Alignment`` flag (enumerated above).
-    :param kind: int
+    :type value: int
     :return: The ``Alignment`` that corresponds to ``value``, or ``Alignment.ALIGN_NONE`` if the
         value could not be matched, or if the value is a combination of flags.
     :rtype: Alignment
@@ -45,7 +45,7 @@ Alignment
     Returns the ``decpys`` implementation for a ``Qt.Alignment`` object.
 
     :param flag: A flag used by the Qt toolkit to determine widget/layout alignment.
-    :param kind: Qt.Alignment
+    :type flag: Qt.Alignment
     :return: The ``Alignment`` that corresponds to ``flag``.
     :rtype: Alignment
 
@@ -55,7 +55,7 @@ Alignment
     Returns the PySide6 Qt object representation for ``flag``.
 
     :param flag: An ``Alignment``.
-    :param kind: Alignment
+    :type flag: Alignment
     :return: The original ``Qt.Alignment`` object that ``Alignment`` extends.
     :rtype: PySide6.QtCore.Qt.Alignment
 
