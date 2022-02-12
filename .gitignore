@@ -141,4 +141,4 @@ cython_debug/
 
 
 # Python scratch-pad for testing stuff out on the fly
-scratch.py
+testenv/*
