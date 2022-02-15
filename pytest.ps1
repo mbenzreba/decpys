@@ -5,4 +5,5 @@
 
 pytest tests/core/test_qt.py
 pytest tests/gui/test_qicon.py
+pytest tests/widgets/test_qabstractbutton.py
 pytest tests/widgets/test_qlabel.py
