@@ -2,4 +2,5 @@
 """
 
 
+from .qabstractbutton import QAbstractButton
 from .qlabel import QLabel
