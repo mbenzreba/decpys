@@ -23,6 +23,7 @@ from decpys.widgets import QAbstractButton
 ##########################
 
 
+
 class Button(QAbstractButton):
     """ Simple button class derived from `QAbstractButton`.
     """
@@ -87,4 +88,12 @@ def test_button_text(init_qapp):
     btn = button(text="original").setText("mutated")
     assert btn.text() == "mutated", \
             "The setText() method must return an instance of the widget after it has been mutated."
+
+
+def test_button_icon(init_qapp):
+    """ Assert that a Button (derived from QAbstractButton) can have its icon mutated and accessed.
+    """
+    btn = button(icon=QIcon("tests\\gui\\icons\\check-underline.png"))
+    assert btn.icon(), \
+            "The button() method must set the Button's icon."
 
