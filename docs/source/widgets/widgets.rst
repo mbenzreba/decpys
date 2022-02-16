@@ -15,3 +15,4 @@ for an index of all widgets this package wraps.
 
     qabstractbutton
     qlabel
+    qpushbutton
