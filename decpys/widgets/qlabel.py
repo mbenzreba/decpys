@@ -52,4 +52,34 @@ class QLabel(BaseQLabel):
         """
         super().setText(text)
         return self
+
+
+
+######################################
+##      CONVENIENCE FUNCTION        ##
+######################################
+
+
+
+def qLabel(text: str = None,
+        halign: Alignment = None,
+        valign: Alignment = None):
+    """ Returns a QLabel.
+
+    - text (str): text the label displays
+    - halign (Alignment): horizontal alignment
+    - valign (Alignment): vertical alignment
+    """
+    label = QLabel()
+
+    if text:
+        label.setText(text)
+
+    if halign:
+        label.setAlignment(halign)
+    
+    if valign:
+        label.setAlignment(valign)
+
+    return label
     

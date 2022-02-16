@@ -13,14 +13,14 @@ from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QGuiApplication
 
 # decpys
-from decpys.widgets import QLabel
+from decpys.widgets import QLabel, qLabel
 from decpys.core import Alignment
 
 
 
 @pytest.fixture(scope="module")
-def init_qapp():
-    """ Initialize the Qt application so that widgets can exist.
+def init_qapp() -> QApplication:
+    """ A QApplication must exist before any QWidget is instantiated.
     """
     app = QApplication()
     yield app
@@ -49,3 +49,11 @@ def test_qlabel_alignment(init_qapp):
     assert label.alignment() == (Alignment.ALIGN_NONE, Alignment.ALIGN_VCENTER, )
     label = label.setAlignment(Alignment.ALIGN_TOP)
     assert label.alignment() == (Alignment.ALIGN_NONE, Alignment.ALIGN_TOP, )
+
+
+def test_qlabel_function(init_qapp):
+    """ Assert that qLabel() can be used in a declarative way to construct a QLabel object.
+    """
+    label = qLabel(text="original").setText("modified")
+    assert label.text() == "modified", \
+            "qLabel() must provide a QLabel object that can be modified in the same line as it is called."

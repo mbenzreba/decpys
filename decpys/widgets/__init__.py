@@ -3,4 +3,4 @@
 
 
 from .qabstractbutton import QAbstractButton
-from .qlabel import QLabel
+from .qlabel import QLabel, qLabel
