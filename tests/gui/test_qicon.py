@@ -5,6 +5,7 @@
 
 # test
 import pytest
+from fixtures import init_qguiapp
 import define_pkg_path
 
 # pyside
@@ -16,15 +17,7 @@ from decpys.gui import QIcon
 
 
 
-@pytest.fixture(scope="module")
-def init_qguiapp():
-    """ Initialize the Qt application so that GUI objcts can exist.
-    """
-    app = QGuiApplication()
-    yield app
-
-
-def test_qicon():
+def test_qicon(init_qguiapp):
     """ Assert that a QIcon can be instantiated and registers as relevant types.
     """
     icon = QIcon()
