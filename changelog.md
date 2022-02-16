@@ -18,10 +18,16 @@ adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
     * instantiation from an icon file
     * validity check to see if an image is actually associated with the icon
 * Widgets
+  * `decpys.widgets.QAbstractButton`
+    * basic instantiation and setters for text and icon properties
   * `decpys.widgets.QLabel` (`PySide6.QtWidgets.QLabel` wrapper class)
     * basic instantiation with or without a text label
     * get and set alignment using `decpys.core.Alignment`
     * set text
+    * convenience function `qLabel()` for constructing a `Qlabel` within a declarative UI
+  * `decpys.widgets.QPushButton`
+    * instantiation from helper `qPushButton()`
+    * set a click signal slot (event handler) using `QPushButton.onClick()`
 
 ### Changed
 
