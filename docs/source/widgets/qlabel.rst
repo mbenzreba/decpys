@@ -7,6 +7,26 @@ See the `official Qt documentation <https://doc.qt.io/qtforpython/PySide6/QtWidg
 for the widget this class wraps.
 
 
+Convenience functions
+---------------------
+
+Use these convenience functions when you need to construct QLabel within your UI.
+
+.. py:function:: qLabel(text = None,
+    halign = None,
+    valign = None)
+
+    Returns a QLabel.
+
+    :param text: Text label.
+    :type text: str or None
+    :param halign: Horizontal alignment.
+    :type halign: Alignment or None
+    :param valign: Vertical alignment
+    :type valign: Alignment or None
+    :rtype: QLabel
+
+
 Methods
 -------
 
