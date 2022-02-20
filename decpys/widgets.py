@@ -7,13 +7,18 @@
 from typing import Union
 
 # pyside
-from PySide6.QtCore import Qt
+from PySide6.QtCore import (
+    Qt, 
+    QObject
+)
 from PySide6.QtGui import (
     QIcon
 )
 from PySide6.QtWidgets import (
-    QLabel,
-    QPushButton
+    QLabel, QLayout,
+    QPushButton,
+    QVBoxLayout,
+    QWidget
 )
 
 
@@ -24,12 +29,16 @@ from PySide6.QtWidgets import (
 
 
 
-def qLabel(text: str = None,
-        align: Qt.Alignment = None):
+def qLabel(
+        text: str = None,
+        align: Qt.Alignment = None,
+        layout: QLayout = None
+    ) -> QLabel:
     """ Returns a QLabel.
 
     * text (str): text the label displays
     * align (Qt.Alignment): alignment flags
+    * layout (QLayout): layout containing children of this widget
     """
     label = QLabel()
 
@@ -39,14 +48,21 @@ def qLabel(text: str = None,
     if align:
         label.setAlignment(align)
 
+    if layout:
+        label.setLayout(layout)
+
     return label
 
 
 
-def qPushButton(display: Union[str, QIcon] = None) -> QPushButton:
+def qPushButton(
+        display: Union[str, QIcon] = None,
+        layout: QLayout = None,
+    ) -> QPushButton:
     """ Returns a QPushButton.
 
     * display (str | QIcon): text or icon to display on button
+    * layout (QLayout): layout containing children of this widget
     """
     btn = QPushButton()
 
@@ -55,5 +71,25 @@ def qPushButton(display: Union[str, QIcon] = None) -> QPushButton:
     elif isinstance(display, QIcon):
         btn.setIcon(display)
 
+    if layout:
+        btn.setLayout(layout)
+    
     return btn
+
+
+
+def qVBoxLayout(
+        children: list[QWidget]
+    ) -> QVBoxLayout:
+    """ Returns a QVBoxLayout.
+
+    * children (list[QWidget]): widgets placed inside this layout, order-sensitive
+    """
+    layout = QVBoxLayout()
+
+    for child in children:
+        layout.addWidget(child)
+
+    return layout
+
 
