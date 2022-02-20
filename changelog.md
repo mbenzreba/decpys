@@ -10,18 +10,19 @@ adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Automated tests using `pytest` module
 * GUI
   * `decpys.gui.QIcon` (`PySide6.QtGui.QIcon` wrapper class)
-    * instantiation from an icon file
+    * set icon file using full path
 * Widgets
-  * `decpys.widgets.QLabel` (`PySide6.QtWidgets.QLabel` wrapper class)
-    * instantiation using `qLabel()`
-    * set a layout
-  * `decpys.widgets.QPushButton`
-    * instantiation using `qPushButton()`
-    * instantiation using text or an icon
-    * set a layout
-  * `decpys.widgets.QVBoxLayout()`
-    * instantiation using `qVBoxLayout()`
-    * list children in call
+  * `decpys.widgets.qLabel`
+    * set alignment
+    * set text
+    * set layout
+  * `decpys.widgets.qPushButton()`
+    * set display using text or an icon
+    * set layout
+  * `decpys.widgets.qVBoxLayout()`
+    * set children widgets in a list
+  * `decpys.widgets.qWidget()`
+    * set layout
 
 ### Changed
 
