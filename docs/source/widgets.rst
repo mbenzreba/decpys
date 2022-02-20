@@ -51,3 +51,11 @@ Use these initialization functions to create and return the widgets your UI need
     :param children: widgets placed inside this layout, order-sensitive
     :type children: `QWidget <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QWidget.html>`_
 
+
+.. py:function:: qWidget(
+    layout)
+
+    Returns a `QWidget <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QWidget.html>`_.
+
+    :param layout: layout containing the children of this widget
+    :type layout: `QLayout <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QLayout.html>`_
