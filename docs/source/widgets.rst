@@ -33,12 +33,15 @@ Use these initialization functions to create and return the widgets your UI need
 
 .. py:function:: qPushButton(
     display = None,
+    slots = None,
     layout = None)
 
     Returns a `QPushButton <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QPushButton.html>`_.
 
     :param display: display text/icon
     :type display: str | `PySide6.QtGui.QIcon <https://doc.qt.io/qtforpython/PySide6/QtGui/QIcon.html>`_
+    :param slots: a list of this widget's signals and the corresponding slots to emit those signals to
+    :type slots: list[Tuple[SignalType, Callable[..., Any]]]
     :param layout: layout containing the children of this widget
     :type layout: `QLayout <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QLayout.html>`_
 
