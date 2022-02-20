@@ -25,6 +25,9 @@ from PySide6.QtWidgets import (
 from decpys.gui import (
     qIcon
 )
+from decpys.types import (
+    onClick
+)
 from decpys.widgets import (
     qLabel,
     qPushButton,
@@ -38,6 +41,9 @@ from decpys.widgets import (
 ##          UNIT TEST WIDGETS           ##
 ##########################################
 
+
+##  -------------------------
+##  QLabel
 
 
 def test_qlabel(init_qapp):
@@ -56,6 +62,16 @@ def test_qlabel(init_qapp):
     assert label.alignment() & Qt.AlignmentFlag.AlignVertical_Mask == Qt.AlignmentFlag.AlignVCenter, \
         "The label's vertical alignment must be properly set within qLabel()."
 
+
+
+##  -------------------------
+##  QPushButton
+
+
+qPushButtonValue = 0
+def incrementQPushButtonValue():
+    global qPushButtonValue
+    qPushButtonValue += 1
 
 
 def test_qpushbutton(init_qapp):
@@ -80,6 +96,24 @@ def test_qpushbutton(init_qapp):
         "The button's icon must be set within qPushButton()"
 
 
+def test_qpushbutton_onClick(init_qapp):
+    """
+    """
+    btn = qPushButton(
+        display = "clickHandler",
+        slots = [
+            (onClick(), incrementQPushButtonValue)
+        ]
+    )
+    btn.click()
+    assert qPushButtonValue == 1, \
+        "The global value must be incremented after the button is clicked."
+
+
+
+##  -------------------------
+##  QVBoxLayout
+
 
 def test_qvboxlayout(init_qapp):
     """ Assert that `qVBoxLayout()` initializes and returns a QVBoxLayout.
@@ -94,6 +128,10 @@ def test_qvboxlayout(init_qapp):
     assert layout.count() == 1, \
         "The layout's children widgets must be added inside qVBoxLayout()."
 
+
+
+##  -------------------------
+##  QWidget
 
 
 def test_qwidget(init_qapp):
