@@ -31,6 +31,15 @@ Use these initialization functions to create and return the widgets your UI need
     :type layout: `QLayout <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QLayout.html>`_
 
 
+.. py:function:: qMainWindow(
+    centralWidget)
+
+    Returns a `QMainWindow <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QMainWindow.html>`_.
+
+    :param centralWidget: the central widget of this window
+    :type centralWidget: `QWidget <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QWidget.html>`_
+
+
 .. py:function:: qPushButton(
     display = None,
     slots = None,
