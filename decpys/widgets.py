@@ -16,6 +16,7 @@ from PySide6.QtGui import (
 )
 from PySide6.QtWidgets import (
     QLabel, QLayout,
+    QMainWindow,
     QPushButton,
     QVBoxLayout,
     QWidget
@@ -55,6 +56,19 @@ def qLabel(
         label.setLayout(layout)
 
     return label
+
+
+
+def qMainWindow(
+        centralWidget: QWidget
+    ) -> QMainWindow:
+    """ Returns a QMainWindow.
+
+    * centralWidget (QWidget): the central widget of this window
+    """
+    window = QMainWindow()
+    window.setCentralWidget(centralWidget)
+    return window
 
 
 
