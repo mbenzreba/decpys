@@ -4,7 +4,7 @@
 
 
 # python
-from typing import Union
+from typing import Tuple, Union, Callable, Any
 
 # pyside
 from PySide6.QtCore import (
@@ -20,6 +20,9 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget
 )
+
+# decpys
+from decpys.types import SignalType
 
 
 
@@ -57,11 +60,14 @@ def qLabel(
 
 def qPushButton(
         display: Union[str, QIcon] = None,
+        slots: list[Tuple[SignalType, Callable[..., Any]]] = None,
         layout: QLayout = None,
     ) -> QPushButton:
     """ Returns a QPushButton.
 
     * display (str | QIcon): text or icon to display on button
+    * slots (list of (SignalType, Callable[..., Any]) tuples): a list of this widget's signals 
+    and the corresponding slots to emit those signals to
     * layout (QLayout): layout containing children of this widget
     """
     btn = QPushButton()
@@ -70,6 +76,12 @@ def qPushButton(
         btn.setText(display)
     elif isinstance(display, QIcon):
         btn.setIcon(display)
+
+    if slots:
+        for slot in slots:
+            signal = slot[0]
+            if signal == SignalType.CLICKED:
+                btn.clicked.connect(slot[1])
 
     if layout:
         btn.setLayout(layout)
