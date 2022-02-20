@@ -18,6 +18,7 @@ Jump down to :ref:`some examples <Usage>` to see how ``decpys`` is used.
    :caption: Classes:
 
    gui
+   types
    widgets
 
 
