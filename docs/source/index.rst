@@ -17,9 +17,8 @@ Jump down to :ref:`some examples <Usage>` to see how ``decpys`` is used.
    :maxdepth: 2
    :caption: Classes:
 
-   core/core
-   gui/gui
-   widgets/widgets
+   gui
+   widgets
 
 
 
