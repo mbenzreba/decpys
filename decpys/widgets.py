@@ -93,3 +93,16 @@ def qVBoxLayout(
     return layout
 
 
+
+def qWidget(
+        layout: QLayout
+    ) -> QWidget:
+    """ Returns a QWidget.
+
+    * layout (QLayout): layout containing children of this widget
+    """
+    widget = QWidget()
+    widget.setLayout(layout)
+    return widget
+
+
