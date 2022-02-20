@@ -14,9 +14,14 @@ adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Widgets
   * `decpys.widgets.QLabel` (`PySide6.QtWidgets.QLabel` wrapper class)
     * instantiation using `qLabel()`
+    * set a layout
   * `decpys.widgets.QPushButton`
     * instantiation using `qPushButton()`
     * instantiation using text or an icon
+    * set a layout
+  * `decpys.widgets.QVBoxLayout()`
+    * instantiation using `qVBoxLayout()`
+    * list children in call
 
 ### Changed
 
