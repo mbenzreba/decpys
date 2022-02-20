@@ -9,8 +9,14 @@ See the `official Qt documentation <https://doc.qt.io/qtforpython/PySide6/QtGui/
 for an index of all GUI functionality this package implements.
 
 
-.. toctree::
-    :maxdepth: 1
-    :caption: Classes
+Initializer Functions
+---------------------
 
-    qicon
+
+.. py:function:: qIcon(
+    icon)
+
+    Returns a `QIcon <https://doc.qt.io/qtforpython/PySide6/QtGui/QIcon.html>`_.
+
+    :param icon: full path to icon file
+    :type icon: str

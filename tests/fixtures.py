@@ -2,8 +2,14 @@
 """
 
 
+
+# pytest
 import pytest
+
+# pyside
+from PySide6.QtGui import QGuiApplication
 from PySide6.QtWidgets import QApplication
+
 
 
 @pytest.fixture(scope="session")
@@ -13,4 +19,14 @@ def init_qapp():
     app = QApplication()
     yield app
     app.exit()
+
+
+
+@pytest.fixture(scope="session")
+def init_qguiapp():
+    """ Yields a QGuiApplication so that graphical Qt components can exist.
+    """
+    guiapp = QGuiApplication()
+    yield guiapp
+    guiapp.exit()
 
