@@ -17,7 +17,8 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QLabel,
     QPushButton,
-    QVBoxLayout
+    QVBoxLayout,
+    QWidget
 )
 
 # decpys
@@ -27,7 +28,8 @@ from decpys.gui import (
 from decpys.widgets import (
     qLabel,
     qPushButton,
-    qVBoxLayout
+    qVBoxLayout,
+    qWidget
 )
 
 
@@ -91,4 +93,23 @@ def test_qvboxlayout(init_qapp):
         "The value returned from qVBoxLayout() must be type QVBoxLayout."
     assert layout.count() == 1, \
         "The layout's children widgets must be added inside qVBoxLayout()."
+
+
+
+def test_qwidget(init_qapp):
+    """ Assert that `qWidget()` initializes and returns a QWidget.
+    """
+    widget = qWidget(
+        layout = qVBoxLayout(
+            children = [
+                qLabel(
+                    text = "label"
+                )
+            ]
+        )
+    )
+    assert isinstance(widget, QWidget), \
+        "The value returned from qWidget() must be type QWidget."
+    assert len(widget.children()) == 2, \
+        "The widget's children widgets must be transferred to the widget after configuring the layout."
 
