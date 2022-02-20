@@ -16,7 +16,8 @@ from fixtures import init_qapp
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QLabel,
-    QPushButton
+    QPushButton,
+    QVBoxLayout
 )
 
 # decpys
@@ -25,7 +26,8 @@ from decpys.gui import (
 )
 from decpys.widgets import (
     qLabel,
-    qPushButton
+    qPushButton,
+    qVBoxLayout
 )
 
 
@@ -74,3 +76,19 @@ def test_qpushbutton(init_qapp):
         "The value returned from qPushButton() must be type QPushButton."
     assert btn2.icon() != None, \
         "The button's icon must be set within qPushButton()"
+
+
+
+def test_qvboxlayout(init_qapp):
+    """ Assert that `qVBoxLayout()` initializes and returns a QVBoxLayout.
+    """
+    layout = qVBoxLayout(
+        children = [
+            qLabel("label")
+        ]
+    )
+    assert isinstance(layout, QVBoxLayout), \
+        "The value returned from qVBoxLayout() must be type QVBoxLayout."
+    assert layout.count() == 1, \
+        "The layout's children widgets must be added inside qVBoxLayout()."
+
