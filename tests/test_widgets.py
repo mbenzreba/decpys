@@ -16,6 +16,7 @@ from fixtures import init_qapp
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QLabel,
+    QMainWindow,
     QPushButton,
     QVBoxLayout,
     QWidget
@@ -30,6 +31,7 @@ from decpys.types import (
 )
 from decpys.widgets import (
     qLabel,
+    qMainWindow,
     qPushButton,
     qVBoxLayout,
     qWidget
@@ -61,6 +63,26 @@ def test_qlabel(init_qapp):
         "The label's horizontal alignment must be set within qLabel()."
     assert label.alignment() & Qt.AlignmentFlag.AlignVertical_Mask == Qt.AlignmentFlag.AlignVCenter, \
         "The label's vertical alignment must be properly set within qLabel()."
+
+
+
+##  -------------------------
+##  QMainWindow
+
+
+def test_qmainwindow(init_qapp):
+    """ Assert that `qMainWindow()` initializes and returns a `QMainWindow` appropriately.
+    """
+    window = qMainWindow(
+        centralWidget = qLabel(
+            text = "window label",
+            align = Qt.AlignmentFlag.AlignCenter
+        )
+    )
+    assert isinstance(window, QMainWindow), \
+        "The value returned from qMainWindow() must be type QMainWindow."
+    assert window.centralWidget() != 0, \
+        "The main window's central widget must be set from within qMainWindow()."
 
 
 
