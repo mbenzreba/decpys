@@ -23,6 +23,10 @@ from PySide6.QtWidgets import (
 )
 
 # decpys
+from decpys.cascade import (
+    QLayoutCascader,
+    QWidgetCascader
+)
 from decpys.types import SignalType
 
 
@@ -44,18 +48,11 @@ def qLabel(
     * align (Qt.Alignment): alignment flags
     * layout (QLayout): layout containing children of this widget
     """
-    label = QLabel()
-
-    if text:
-        label.setText(text)
-
-    if align:
-        label.setAlignment(align)
-
-    if layout:
-        label.setLayout(layout)
-
-    return label
+    label = QWidgetCascader(QLabel())
+    return label.setText(text) \
+                .setAlignment(align) \
+                .setLayout(layout) \
+                .getWidget()
 
 
 
@@ -84,23 +81,11 @@ def qPushButton(
     and the corresponding slots to emit those signals to
     * layout (QLayout): layout containing children of this widget
     """
-    btn = QPushButton()
-
-    if isinstance(display, str):
-        btn.setText(display)
-    elif isinstance(display, QIcon):
-        btn.setIcon(display)
-
-    if slots:
-        for slot in slots:
-            signal = slot[0]
-            if signal == SignalType.CLICKED:
-                btn.clicked.connect(slot[1])
-
-    if layout:
-        btn.setLayout(layout)
-    
-    return btn
+    btn = QWidgetCascader(QPushButton())
+    return btn.setTextOrIcon(display) \
+              .setSlots(slots) \
+              .setLayout(layout) \
+              .getWidget()
 
 
 
@@ -111,12 +96,9 @@ def qVBoxLayout(
 
     * children (list[QWidget]): widgets placed inside this layout, order-sensitive
     """
-    layout = QVBoxLayout()
-
-    for child in children:
-        layout.addWidget(child)
-
-    return layout
+    layout = QLayoutCascader(QVBoxLayout())
+    return layout.setChildren(children) \
+                 .getLayout()
 
 
 
