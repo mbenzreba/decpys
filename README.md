@@ -9,7 +9,11 @@ using modern declarative UI techniques completely within Python. `decpys` is lic
 
 ## Installation
 
-TODO! After the package is published to PyPI...
+`decpys` is available through PyPI. From the command-line, simply:
+
+```
+pip install decpys
+```
 
 
 
@@ -59,5 +63,5 @@ Indents lend themselves well to visualizing widget hierarchy. Python's keyword a
 IDEs' support for type hinting) help the user find relevant properties. If you've ever used a
 declarative-UI framework, you know the benefits it brings to productivity and readable code.
 
-See the [ClickableButton example](examples/ClickableButton/main.py) for a more involved look at
-how `decpys` can be used.
+See the [ClickableButton example](https://github.com/mbenzreba/decpys/blob/master/examples/ClickableButton/main.py) 
+for a more involved look at how `decpys` can be used.
