@@ -74,6 +74,7 @@ def test_qmainwindow(init_qapp):
     """ Assert that `qMainWindow()` initializes and returns a `QMainWindow` appropriately.
     """
     window = qMainWindow(
+        title="window",
         centralWidget = qLabel(
             text = "window label",
             align = Qt.AlignmentFlag.AlignCenter

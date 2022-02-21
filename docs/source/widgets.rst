@@ -32,10 +32,13 @@ Use these initialization functions to create and return the widgets your UI need
 
 
 .. py:function:: qMainWindow(
+    title,
     centralWidget)
 
     Returns a `QMainWindow <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QMainWindow.html>`_.
 
+    :param title: window title
+    :type title: str
     :param centralWidget: the central widget of this window
     :type centralWidget: `QWidget <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QWidget.html>`_
 

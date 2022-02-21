@@ -57,6 +57,7 @@ def qLabel(
 
 
 def qMainWindow(
+        title: str,
         centralWidget: QWidget
     ) -> QMainWindow:
     """ Returns a QMainWindow.
@@ -64,6 +65,7 @@ def qMainWindow(
     * centralWidget (QWidget): the central widget of this window
     """
     window = QMainWindow()
+    window.setWindowTitle(title)
     window.setCentralWidget(centralWidget)
     return window
 
