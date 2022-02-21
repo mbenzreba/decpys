@@ -48,7 +48,7 @@ Use these initialization functions to create and return the widgets your UI need
     Returns a `QPushButton <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QPushButton.html>`_.
 
     :param display: display text/icon
-    :type display: str | `PySide6.QtGui.QIcon <https://doc.qt.io/qtforpython/PySide6/QtGui/QIcon.html>`_
+    :type display: str | `QIcon <https://doc.qt.io/qtforpython/PySide6/QtGui/QIcon.html>`_
     :param slots: a list of this widget's signals and the corresponding slots to emit those signals to
     :type slots: list[Tuple[SignalType, Callable[..., Any]]]
     :param layout: layout containing the children of this widget
@@ -61,7 +61,7 @@ Use these initialization functions to create and return the widgets your UI need
     Returns a `QVBoxLayout <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QVBoxLayout.html>`_.
 
     :param children: widgets placed inside this layout, order-sensitive
-    :type children: `QWidget <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QWidget.html>`_
+    :type children: list[`QWidget <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QWidget.html>`_]
 
 
 .. py:function:: qWidget(
