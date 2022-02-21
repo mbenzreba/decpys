@@ -17,6 +17,7 @@ Jump down to :ref:`some examples <Usage>` to see how ``decpys`` is used.
    :maxdepth: 2
    :caption: Classes:
 
+   cascade
    gui
    types
    widgets
