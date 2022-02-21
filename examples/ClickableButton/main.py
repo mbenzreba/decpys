@@ -68,6 +68,7 @@ app = QApplication()
 # does all the Qt widget instantiation for us, so that we can focus on writing our UI code in
 # an intuitive and readable way.
 window = qMainWindow(                                                       # start a QMainWindow
+    title="ClickableButton Example",                                        # set the window title
     centralWidget=qWidget(                                                  # start a QWidget
         layout=qVBoxLayout(                                                 # start a QVBoxLayout
             children=[                                                      # start a list of children widgets
