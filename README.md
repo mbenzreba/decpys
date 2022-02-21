@@ -17,6 +17,12 @@ pip install decpys
 
 
 
+## Documentation
+
+Package documentation is hosted using [Read The Docs](https://decpys.readthedocs.io/en/latest/index.html),
+
+
+
 ## Design
 
 `decpys` is inspired by UI frameworks like React and Flutter. `decpys` extends the popular 
