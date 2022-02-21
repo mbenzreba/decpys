@@ -10,8 +10,6 @@ Welcome to decpys's documentation!
 the original `PySide6 <https://pypi.org/project/PySide6/>`_ to enable super-fast GUI prototyping
 using modern declarative UI techniques completely within Python. ``decpys`` is licensed under GPLv2.
 
-Jump down to :ref:`some examples <Usage>` to see how ``decpys`` is used.
-
 
 .. toctree::
    :maxdepth: 2
@@ -21,19 +19,6 @@ Jump down to :ref:`some examples <Usage>` to see how ``decpys`` is used.
    gui
    types
    widgets
-
-
-
-.. _Usage:
-
-Examples and Usage
-------------------
-
-``decpys`` offers a declarative-flavoured take on the popular Qt UI widget toolkit. Every widget
-module in ``decpys`` offers a Qt widget class as well as a one or more top-level functions that
-can be used to build logical UI completely within Python.
-
-TODO: Show an example!
 
 
 
