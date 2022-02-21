@@ -4,7 +4,8 @@
 adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
-## [Unreleased]
+
+## [0.1.0] - Released 2022-02-21
 
 ### Added
 * Automated tests using `pytest` module
@@ -45,16 +46,7 @@ adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   * `decpys.widgets.qWidget()`
     * set layout
 
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-
 
 
 [Unreleased]: https://github.com/mbenzreba/decpys/compare/HEAD...v0.0
+[0.1.0]: https://github.com/mbenzreba/decpys/compare/HEAD...v0.0
