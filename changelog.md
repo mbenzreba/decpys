@@ -3,6 +3,15 @@
 `decpys` follows [semantic versioning](https://semver.org/). The template for this changelog has been
 adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+**Roadmap for 0.2:**
+* add more widget properties in existing and developing widgets so that users can more infely tune their
+controls
+* encapsulate use of `QApplication` and `QMainWindow` so that no imports need to be used from outside Qt
+libraries
+* define more convenience functions for Qt widgets
+* streamline use of library and showcase an app that switches between two UI layouts, or edits a section
+of a UI layout in place
+
 
 ## [Unreleased]
 
