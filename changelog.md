@@ -4,6 +4,16 @@
 adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [Unreleased]
+
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+
+
 
 ## [0.1.0] - Released 2022-02-21
 
@@ -48,5 +58,5 @@ adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
 
-[Unreleased]: https://github.com/mbenzreba/decpys/compare/HEAD...v0.0
+[Unreleased]: https://github.com/mbenzreba/decpys/compare/HEAD...v0.1
 [0.1.0]: https://github.com/mbenzreba/decpys/compare/HEAD...v0.0
