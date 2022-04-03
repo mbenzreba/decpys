@@ -1,4 +1,5 @@
 {
     "restructuredtext.confPath": "${workspaceFolder}\\docs\\source",
-    "powershell.startAutomatically": false
+    "powershell.startAutomatically": false,
+    "esbonio.sphinx.confDir": "${workspaceFolder}\\docs\\source"
 }
