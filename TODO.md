@@ -26,7 +26,7 @@ of a UI layout in place
 [] FormLayout
 [] GridLayout
 [] GroupBox
-[] HBoxLayout
+[x] HBoxLayout
 [x] Label
 [x] MainWindow
 [] Menu
