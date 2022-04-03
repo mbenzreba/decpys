@@ -15,6 +15,7 @@ from fixtures import init_qapp
 # pyside
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
+    QHBoxLayout,
     QLabel,
     QMainWindow,
     QPushButton,
@@ -30,6 +31,7 @@ from decpys.types import (
     onClick
 )
 from decpys.widgets import (
+    qHBoxLayout,
     qLabel,
     qMainWindow,
     qPushButton,
@@ -42,6 +44,25 @@ from decpys.widgets import (
 ##########################################
 ##          UNIT TEST WIDGETS           ##
 ##########################################
+
+
+##  -------------------------
+##  QHBoxLayout
+
+def test_qhboxlayout(init_qapp):
+    """ Assert that `qHBoxLayout()` initializes and returns a `QHBoxLayout` appropriately.
+    """
+    layout = qHBoxLayout(
+        children=[
+            qLabel(
+                text="label"
+            ),
+        ]
+    )
+    assert isinstance(layout, QHBoxLayout), \
+        "The value returned from qHBoxLayout() must be type QHBoxLayout."
+    assert layout.count() == 1, \
+        "The layout's children widgets must be added inside qHBoxLayout()."
 
 
 ##  -------------------------
