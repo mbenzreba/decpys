@@ -16,6 +16,15 @@ Initializer Functions
 Use these initialization functions to create and return the widgets your UI needs.
 
 
+.. py:function:: qHBoxLayout(
+    children)
+
+    Returns a `QHBoxLayout <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QHBoxLayout.html>`_.
+
+    :param children: widgets placed inside this layout, order-sensitive
+    :type children: list[`QWidget <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QWidget.html>`_]
+
+
 .. py:function:: qLabel(
     text = None,
     align = None,
