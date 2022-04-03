@@ -8,6 +8,11 @@ adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+* Widgets
+  * `decpys.widgets.qHBoxLayout()`
+    * set children
+
+
 ### Changed
 ### Deprecated
 ### Removed
