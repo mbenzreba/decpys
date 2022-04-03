@@ -15,6 +15,7 @@ from PySide6.QtGui import (
     QIcon
 )
 from PySide6.QtWidgets import (
+    QHBoxLayout,
     QLabel, QLayout,
     QMainWindow,
     QPushButton,
@@ -36,6 +37,19 @@ from decpys.types import SignalType
 ##################################
 
 
+
+def qHBoxLayout(
+        children: list[QWidget]
+    ) -> QHBoxLayout:
+    """ Returns a QHBoxLayout.
+
+    * children (list[QWidget]): widgets placed inside this layout, order-sensitive
+    """
+    layout = QLayoutCascader(QHBoxLayout())
+    return layout.setChildren(children) \
+                 .getLayout()
+
+                 
 
 def qLabel(
         text: str = None,
