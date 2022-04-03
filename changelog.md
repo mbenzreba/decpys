@@ -4,7 +4,7 @@
 adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 **Roadmap for 0.2:**
-* add more widget properties in existing and developing widgets so that users can more infely tune their
+* add more widget properties in existing and developing widgets so that users can more finely tune their
 controls
 * encapsulate use of `QApplication` and `QMainWindow` so that no imports need to be used from outside Qt
 libraries
