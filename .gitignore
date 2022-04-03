@@ -142,3 +142,6 @@ cython_debug/
 
 # Python scratch-pad for testing stuff out on the fly
 testenv/*
+
+# Build output for sphinx
+docs/source/_build
