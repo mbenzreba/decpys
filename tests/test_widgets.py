@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (
     QLabel,
     QMainWindow,
     QPushButton,
+    QRadioButton,
     QVBoxLayout,
     QWidget
 )
@@ -35,6 +36,7 @@ from decpys.widgets import (
     qLabel,
     qMainWindow,
     qPushButton,
+    qRadioButton,
     qVBoxLayout,
     qWidget
 )
@@ -63,6 +65,7 @@ def test_qhboxlayout(init_qapp):
         "The value returned from qHBoxLayout() must be type QHBoxLayout."
     assert layout.count() == 1, \
         "The layout's children widgets must be added inside qHBoxLayout()."
+
 
 
 ##  -------------------------
@@ -141,7 +144,7 @@ def test_qpushbutton(init_qapp):
 
 
 def test_qpushbutton_onClick(init_qapp):
-    """
+    """ Assert that a click of a qPushButton calls the registered slot.
     """
     btn = qPushButton(
         display = "clickHandler",
@@ -151,6 +154,53 @@ def test_qpushbutton_onClick(init_qapp):
     )
     btn.click()
     assert qPushButtonValue == 1, \
+        "The global value must be incremented after the button is clicked."
+
+
+
+##  -------------------------
+##  QRadioButton
+
+
+qRadioButtonValue = 0
+def incrementQRadioButtonValue():
+    global qRadioButtonValue
+    qRadioButtonValue += 1
+
+
+def test_qradiobutton(init_qapp):
+    """ Assert that `qRadioButton()` initializes and returns a `QRadioButton` appropriately.
+    """
+    # button with text
+    btn1 = qRadioButton(display="button1")
+    assert isinstance(btn1, QRadioButton), \
+        "The value returned from qRadioButton() must be of type QRadioButton."
+    assert btn1.text() == "button1", \
+        "The button's text must be set within qRRadioButton()."
+
+    # button with icon
+    btn2 = qRadioButton(
+        display=qIcon(
+            os.path.join(".", "tests", "icons", "check-underline.png")
+        )
+    )
+    assert isinstance(btn2, QRadioButton), \
+        "The value returned from qRadioButton() must be type QRadioButton."
+    assert btn2.icon() != None, \
+        "The button's icon must be set within qRadioButton()"
+
+
+def test_qradiobutton_onClick(init_qapp):
+    """ Assert that a click of a qRadioButton calls the registered slot.
+    """
+    btn = qRadioButton(
+        display = "clickHandler",
+        slots = [
+            (onClick(), incrementQRadioButtonValue)
+        ]
+    )
+    btn.click()
+    assert qRadioButtonValue == 1, \
         "The global value must be incremented after the button is clicked."
 
 
