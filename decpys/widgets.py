@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (
     QLabel, QLayout,
     QMainWindow,
     QPushButton,
+    QRadioButton,
     QVBoxLayout,
     QWidget
 )
@@ -49,7 +50,7 @@ def qHBoxLayout(
     return layout.setChildren(children) \
                  .getLayout()
 
-                 
+
 
 def qLabel(
         text: str = None,
@@ -103,6 +104,23 @@ def qPushButton(
               .setLayout(layout) \
               .getWidget()
 
+
+
+def qRadioButton(
+        display: Union[str, QIcon] = None,
+        slots: list[Tuple[SignalType, Callable[..., Any]]] = None
+    ) -> QRadioButton:
+    """ Returns a `QRadioButton`.
+
+    * display (str | QIcon): text or icon to display on button
+    * slots (list of (SignalType, Callable[..., Any]) tuples): a list of this widget's signals 
+    and the corresponding slots to emit those signals to
+    """
+    btn = QWidgetCascader(QRadioButton())
+    return btn.setTextOrIcon(display) \
+              .setSlots(slots) \
+              .getWidget()
+              
 
 
 def qVBoxLayout(

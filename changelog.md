@@ -11,6 +11,9 @@ adapted from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Widgets
   * `decpys.widgets.qHBoxLayout()`
     * set children
+  * `decpys.widgets.qRadioButton()`
+    * set display (text or icon)
+    * set slots
 
 
 ### Changed
