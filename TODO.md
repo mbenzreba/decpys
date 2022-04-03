@@ -34,7 +34,7 @@ of a UI layout in place
 [] PlainTextEdit
 [] ProgressBar
 [x] PushButton
-[] RadioButton
+[x] RadioButton
 [] RubberBand
 [] ScrollBar
 [] Slider
