@@ -67,6 +67,18 @@ Use these initialization functions to create and return the widgets your UI need
     :type layout: `QLayout <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QLayout.html>`_
 
 
+.. py:function:: qRadioButton(
+    display = None,
+    slots = None)
+
+    Returns a `QRadioButton <https://doc.qt.io/qtforpython/PySide6/QtWidgets/QRadioButton.html>`_.
+
+    :param display: display text/icon
+    :type display: str | `QIcon <https://doc.qt.io/qtforpython/PySide6/QtGui/QIcon.html>`_
+    :param slots: a list of this widget's signals and the corresponding slots to emit those signals to
+    :type slots: list[Tuple[SignalType, Callable[..., Any]]]
+
+
 .. py:function:: qVBoxLayout(
     children)
 
